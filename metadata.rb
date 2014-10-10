@@ -4,7 +4,7 @@ maintainer_email 'jnweaver@wisc.edu'
 license          'All rights reserved'
 description      'Installs/Configures umark_ruby'
 long_description 'Installs/Configures umark_ruby'
-version          '0.1.1'
+version          '0.1.2'
 
 depends "build-essential"
 depends "ruby_build"
