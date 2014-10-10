@@ -7,6 +7,11 @@
 # All rights reserved - Do Not Redistribute
 #
 
+execute 'bundle install' do
+  cwd node['umark_ruby']['project_root']
+  not_if 'bundle check'
+end
+
 execute 'rake db:schema:load' do
   cwd node['umark_ruby']['project_root']
 end

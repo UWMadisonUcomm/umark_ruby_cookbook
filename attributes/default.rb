@@ -3,12 +3,12 @@
 # Attribute:: default
 
 default['umark_ruby']['project_root'] = '/var/www/'
-# default['umark_ruby']['ruby_version'] = '2.1.1'
+default['umark_ruby']['ruby_version'] = '2.1.1'
 default['umark_ruby']['db_name'] = 'my_db_name'
 default['umark_ruby']['db_name_test'] = 'my_db_name_test'
-default['rbenv']['rubies'] = [ "2.1.1" ]
+default['rbenv']['rubies'] = [ node['umark_ruby']['ruby_version'] ]
 default['rbenv']['gems'] = {
-  '2.1.1' => [
+  node['umark_ruby']['ruby_version'] => [
     { 'name'    => 'bundler', 'options' => "--force" }
   ]
 }

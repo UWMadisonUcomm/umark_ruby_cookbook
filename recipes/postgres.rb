@@ -10,11 +10,6 @@
 include_recipe "database::postgresql"
 include_recipe "postgresql::server"
 
-execute 'bundle install' do
-  cwd node['umark_ruby']['project_root']
-  not_if 'bundle check'
-end
-
 postgresql_connection_info = {
   :host => "localhost",
   :port => node['postgresql']['config']['port']
