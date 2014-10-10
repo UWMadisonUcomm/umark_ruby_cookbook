@@ -7,6 +7,11 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe "redisio"
+include_recipe "redisio::enable"
+include_recipe "imagemagick"
+include_recipe "phantomjs"
+
 execute 'bundle install' do
   cwd node['umark_ruby']['project_root']
   not_if 'bundle check'
@@ -19,4 +24,8 @@ end
 execute 'rake db:seed' do
   cwd node['umark_ruby']['project_root']
   not_if 'psql -U postgres -d alerts_development -c "SELECT * FROM users" | grep wisc.edu' # don't reseed if we already have data
+end
+
+execute 'rake db:migrate RAILS_ENV=test' do
+  cwd node['umark_ruby']['project_root']
 end
