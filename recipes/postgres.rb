@@ -39,19 +39,3 @@ postgresql_database "grant superuser" do
   sql "ALTER USER #{node['umark_ruby']['db_user_name']} WITH SUPERUSER"
   action :query
 end
-
-# postgresql_database_user "grant_dev_privs" do
-#   connection    postgresql_connection_info
-#   username node['umark_ruby']['db_user_name']
-#   database_name node['umark_ruby']['db_name']
-#   privileges    [:all]
-#   action        :grant
-# end
-
-# postgresql_database_user "grant_test_privs" do
-#   connection    postgresql_connection_info
-#   username node['umark_ruby']['db_user_name']
-#   database_name node['umark_ruby']['db_name_test']
-#   privileges    [:all]
-#   action        :grant
-# end

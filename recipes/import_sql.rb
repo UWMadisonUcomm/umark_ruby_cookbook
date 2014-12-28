@@ -12,15 +12,6 @@ postgresql_connection_info = {
   :port => node['postgresql']['config']['port']
 }
 
-# sql_dump = "/var/www/db/localdev.sql"
-# postgresql_database 'Import SQL' do
-#   connection postgresql_connection_info
-#   database_name node['umark_ruby']['dbname']
-#   sql { ::File.open(sql_dump).read }
-#   only_if { File.exists?(sql_dump) }
-#   action :query
-# end
-
 execute "psql -U postgres map_development < /var/www/db/localdev.sql" do
   cwd node['umark_ruby']['project_root']
   user "postgres"
