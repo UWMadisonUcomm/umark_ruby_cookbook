@@ -4,7 +4,7 @@ maintainer_email 'jnweaver@wisc.edu'
 license          'All rights reserved'
 description      'Installs/Configures umark_ruby'
 long_description 'Installs/Configures umark_ruby'
-version          '0.1.5'
+version          '0.1.6'
 
 depends "selinux", "= 0.8.0"
 depends "build-essential", "~> 2.0.6"
