@@ -7,8 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe "redisio"
-include_recipe "redisio::enable"
 include_recipe "imagemagick"
 include_recipe "phantomjs"
 
