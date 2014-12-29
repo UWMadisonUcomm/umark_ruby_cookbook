@@ -10,6 +10,7 @@
 include_recipe "database::postgresql"
 include_recipe "postgresql::server"
 include_recipe "postgresql::ruby"
+include_recipe "postgresql::contrib"
 
 postgresql_connection_info = {
   :host => "localhost",
