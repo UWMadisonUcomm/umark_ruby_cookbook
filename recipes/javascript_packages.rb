@@ -12,4 +12,5 @@ include_recipe "grunt_cookbook::install_grunt_cli"
 
 grunt_cookbook_npm node['umark_ruby']['project_root'] do
   action :install
+  flags "--no-bin-link --unsafe-perm"
 end
