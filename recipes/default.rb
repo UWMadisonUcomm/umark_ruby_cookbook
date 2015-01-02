@@ -14,6 +14,7 @@ end
 user "railsuser" do
   uid node['map']['uid']
   gid node['map']['gid']
+  system true
 end
 
 include_recipe "ruby_build"
