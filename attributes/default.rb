@@ -28,4 +28,5 @@ default['postgresql']['pg_hba'] = [
   {:type => 'host', :db => 'all', :user => 'all', :addr => '::1/128', :method => 'trust'}
 ]
 default['phantomjs']['install_method'] = 'package'
+default['phantomjs']['version'] = '2.1.1'
 default['nodejs']['version'] = '0.10.35'
