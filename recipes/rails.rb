@@ -8,7 +8,7 @@
 #
 
 include_recipe "imagemagick"
-include_recipe "phantomjs"
+# include_recipe "phantomjs"
 
 execute 'bundle config build.pg --with-pg-config=/usr/pgsql-9.3/bin/pg_config' do
   cwd node['umark_ruby']['project_root']
