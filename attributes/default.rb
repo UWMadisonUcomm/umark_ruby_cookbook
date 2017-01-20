@@ -12,6 +12,7 @@ default['rbenv']['gems'] = {
     { 'name'    => 'bundler', 'options' => "--force" }
   ]
 }
+default['postgresql']['pgdg']['repo_rpm_url']['9.3']['centos']['6']['x86_64'] = 'http://yum.postgresql.org/9.3/redhat/rhel-6-x86_64/pgdg-centos93-9.3-3.noarch.rpm'
 default['postgresql']['assign_postgres_password'] = false
 default['postgresql']['enable_pgdg_yum'] = true
 default['postgresql']['version'] = "9.3"
