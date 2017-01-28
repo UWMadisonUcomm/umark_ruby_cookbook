@@ -18,5 +18,5 @@ user "railsuser" do
 end
 
 include_recipe "ruby_build"
-include_recipe "rbenv::system"
+include_recipe "ruby_rbenv::system"
 rbenv_global node['umark_ruby']['ruby_version']

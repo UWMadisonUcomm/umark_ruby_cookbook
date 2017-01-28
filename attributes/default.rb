@@ -6,13 +6,17 @@ default['umark_ruby']['project_root'] = '/var/www/'
 default['umark_ruby']['ruby_version'] = '2.1.1'
 default['umark_ruby']['db_name'] = 'my_db_name'
 default['umark_ruby']['db_name_test'] = 'my_db_name_test'
+
+# ruby-build upgrade action; set in project Vagrantfile
+# default['ruby_build']['upgrade'] = 'none'
+
 default['rbenv']['rubies'] = [ node['umark_ruby']['ruby_version'] ]
 default['rbenv']['gems'] = {
   node['umark_ruby']['ruby_version'] => [
     { 'name'    => 'bundler', 'options' => "--force" }
   ]
 }
-default['postgresql']['pgdg']['repo_rpm_url']['9.3']['centos']['6']['x86_64'] = 'http://yum.postgresql.org/9.3/redhat/rhel-6-x86_64/pgdg-centos93-9.3-3.noarch.rpm'
+# default['postgresql']['pgdg']['repo_rpm_url']['9.3']['centos']['6']['x86_64'] = 'http://yum.postgresql.org/9.3/redhat/rhel-6-x86_64/pgdg-centos93-9.3-3.noarch.rpm'
 default['postgresql']['assign_postgres_password'] = false
 default['postgresql']['enable_pgdg_yum'] = true
 default['postgresql']['version'] = "9.3"

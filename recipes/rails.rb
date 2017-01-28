@@ -20,7 +20,7 @@ execute 'bundle install' do
   not_if 'bundle check'
 end
 
-execute 'rake db:schema:load' do
+execute 'bin/rails db:environment:set RAILS_ENV=development' do
   cwd node['umark_ruby']['project_root']
 end
 
@@ -29,6 +29,6 @@ execute 'rake db:seed' do
   not_if 'psql -U postgres -d alerts_development -c "SELECT * FROM users" | grep wisc.edu' # don't reseed if we already have data
 end
 
-execute 'rake db:schema:load RAILS_ENV=test' do
+execute 'bin/rails db:environment:set RAILS_ENV=test' do
   cwd node['umark_ruby']['project_root']
 end

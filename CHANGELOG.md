@@ -1,3 +1,7 @@
-# 0.1.0
+# 0.2.0
+
+Updates cookbooks to current versions as of January 27, 2017
+
+# 0.1.9
 
 Initial release of umark_ruby_cookbook
