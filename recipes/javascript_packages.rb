@@ -8,14 +8,6 @@
 #
 
 include_recipe "nodejs"
-# include_recipe "grunt_cookbook::install_grunt_cli"
-
-# nodejs_npm 'app' do
-#   path node['umark_ruby']['project_root']
-#   json true
-# end
-
-
 
 cookbook_file "tmp_npm.sh" do
   path node['umark_ruby']['project_root'] + "tmp_npm.sh"
