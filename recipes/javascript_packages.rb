@@ -10,6 +10,11 @@
 include_recipe "nodejs"
 # include_recipe "grunt_cookbook::install_grunt_cli"
 
+nodejs_npm 'app' do
+  path node['umark_ruby']['project_root']
+  json true
+end
+
 nodejs_npm "grunt-cli"
 
 # cookbook_file "tmp_npm.sh" do
