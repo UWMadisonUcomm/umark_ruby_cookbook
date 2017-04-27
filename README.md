@@ -2,13 +2,10 @@
 
 This chef cookbook provides recipes for building a Rails development Vagrant box on Centos 6.6. It installs PostgreSQL 9.3 and creates development and test databases. It then runs `bundle install`, `npm install`, `rake db:schema:load` and `rake db:seed` to install gems, Node modules and load the database schema and seed data.
 
-## Version 0.2.1
-
-Updated all cookbooks to latest versions. Older projects using this cookbook might want to pin to the 0.1.9 version until their Vagrantfiles can be tested against the newerr cookbooks.
 
 ## Supported Platforms
 
-* Centos 6.6
+* Centos 6.7
 
 ## Attributes
 

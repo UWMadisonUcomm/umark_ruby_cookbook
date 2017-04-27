@@ -1,3 +1,7 @@
+# 0.2.2
+
+Removed grunt_cookbook; now installing grunt-cli with nodejs_npm
+
 # 0.2.1
 
 Fixes bug in rails recipe with db:schema:load
