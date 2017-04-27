@@ -8,7 +8,6 @@
 #
 
 include_recipe "nodejs"
-include_recipe "grunt_cookbook::install_grunt_cli"
 
 cookbook_file "tmp_npm.sh" do
   path node['umark_ruby']['project_root'] + "tmp_npm.sh"
@@ -22,3 +21,5 @@ execute "run tmp npm install to bypass NFS permission issues" do
   action :run
   command "./tmp_npm.sh install"
 end
+
+nodejs_npm "grunt-cli"
